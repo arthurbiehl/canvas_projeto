@@ -1,0 +1,146 @@
+*{
+    font-family: 'Josefin Sans';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.sobre {
+    width: 100%;
+    height: 700px;
+    padding-top: 20px   ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-size: auto;
+}
+
+.container_sobre {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre_logo {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre_logo img {
+    width: 250px;
+}
+
+
+.caixas {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.caixinha_canva {
+    width: 210px;
+    height: 250px;
+    margin: 20px;
+    border-radius: 3px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background: linear-gradient(#44DBDA, #6B00CC);
+}
+
+.caixinha_canva h1 {
+    font-size: 24px;
+    margin: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.caixinha_canva p {
+    margin: 5px;
+    color: white;
+}  
+
+
+.caixinha_canvas{
+    width: 210px;
+    height: 250px;
+    margin: 20px;
+    border-radius: 3px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background-color: #2B8C44;
+}
+
+.caixinha_canvas h1 {
+    font-size: 24px;
+    margin: 5px;
+    color: white;
+}
+
+.caixinha_canvas p {
+    margin: 10px;
+    color: white;
+}  
+
+.sobre2 {
+    width: 100%;
+    height: 400px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../static/fundo.jpeg');
+
+}
+
+.container_sobre2 {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre2_escrita {
+    width: 400px;
+    display:flex;   
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.sobre2_escrita h1 {
+    margin: 10px;
+}
+
+.sobre2_escrita p  {
+    margin: 10px;
+}
+
+.sobre2_img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.sobre2_img img {
+    width: 70%;
+    margin: 0;
+}
