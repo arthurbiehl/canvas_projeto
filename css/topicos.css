@@ -8,7 +8,7 @@
 }
 
 .container_topicos {
-    width: 80%;
+    width: 100%;
     height: 200px;
     display: flex;
     justify-content: space-around;
@@ -16,29 +16,60 @@
     flex-wrap: wrap;
 }
 
+/* card */
 .topico {
-    width: 150px;
-    height: 150px;
+    width: 230px;
+    height: 270px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 360px;
-    box-shadow: 0px 0px 3px black;
-    margin: 10px;
+    align-items: flex-end;
     transition: 0.5s;
+    background-size: contain;
+    box-shadow: 0px 0px 2px rgba(82, 82, 82, 0.646);
+    position: relative;
+}
+
+.topico img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.topico a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.conteudo_caixa {
+    width: 100%;
+    height: 60px;
+    display: flex;  
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.838);
+    font-size: 18px;
+    background-color: rgb(39, 39, 39);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.conteudo_caixa p {
+    margin-left: 10px;
 }
 
 .topico:hover {
-    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px black;
 }
 
-
-.topico svg {
-    width: 70px;
-    stroke: rgba(0, 0, 0, 0.699);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.topico:hover .conteudo_caixa {
+    opacity: 1;
 }
 
 @media screen and (max-width: 950px) {
@@ -51,10 +82,9 @@
 
 @media screen and (max-width: 600px) {
     .topicos {
-        width: 100% ;
+        width: 100%;
         height: 900px;
     }
 }
-
 
 
