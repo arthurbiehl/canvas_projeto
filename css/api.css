@@ -1,0 +1,88 @@
+
+
+.conteudo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container_conteudo {
+    width: 80%;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.escrita_conteudo {
+    width: 900px;
+    height: 150px;
+}
+.exemplos {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    flex-direction: column;
+}
+
+.exemplos h1 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.exemplos p {
+    margin: 10px;
+}
+
+.caixa_preta {
+    width: 800px;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    background-color: rgb(43, 43, 43);
+}
+
+
+.caixa_branca {
+    width: 800px;
+    height: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    color: white;
+    background-color: white;
+    box-shadow: 0px 0px 2px black;
+}
+
+.preto {
+    width: 800px;
+    height: 25px;
+    display: flex;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(43, 43, 43);
+}
+
+.caixa_exemplo {
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    background-color: green;
+}
