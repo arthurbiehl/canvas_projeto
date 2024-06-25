@@ -22,7 +22,7 @@
 
 .escrita_conteudo {
     width: 900px;
-    height: 150px;
+    height: 100px;
 }
 .exemplos {
     width: 900px;
@@ -75,9 +75,14 @@
     display: flex;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: left;
+    align-items: center;
     background-color: rgb(43, 43, 43);
+}
+
+.preto p {
+    text-align: left;
+    color: white;
 }
 
 .caixa_exemplo {
