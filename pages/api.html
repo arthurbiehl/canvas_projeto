@@ -17,17 +17,17 @@
 
 <body>
 
-        <!-- HEADER -->
+    <!-- HEADER -->
 
     <header>
         <div class="container_header">
 
             <div class="header_img">
-                <img src="../static/logo.jpeg" alt="">
+                <a href="../pages/inicio.html"><img src="../static/logo.jpeg" alt=""></a>
+
             </div>
 
             <div class="links">
-                <a href="../pages/inicio.html">INICIO</a>
                 <a href="#sobre2">SOBRE</a>
                 <div class="linha"></div>
                 <a href="../pages/api.html">API</a>
@@ -45,7 +45,9 @@
         <div class="container_conteudo">
             <div class="escrita_conteudo">
                 <h1>API de Desenho 2D</h1>
-                <p>A Canvas API provê maneiras de desenhar gráficos via JavaScript e via elemento HTML 'Canvas'. Entre outras coisas, ele pode ser utilizado para animação, gráficos de jogos, visualização de dados, manipulação de fotos e processamento de vídeo em tempo real.</p>
+                <p>A Canvas API provê maneiras de desenhar gráficos via JavaScript e via elemento HTML 'Canvas'. Entre
+                    outras coisas, ele pode ser utilizado para animação, gráficos de jogos, visualização de dados,
+                    manipulação de fotos e processamento de vídeo em tempo real.</p>
             </div>
 
             <div class="exemplos">
@@ -54,19 +56,24 @@
 
                 <h3>HTML</h3>
                 <div class="caixa_preta">
-                    <p><pre>&lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</pre></p>
+                    <p>
+                    <pre>&lt;canvas id=&quot;circulo&quot;&gt;&lt;/canvas&gt;</pre>
+                    </p>
                 </div>
 
                 <h1>JavaScript</h1>
-                <p>O método Document.getElementById() pega uma referência para o elemento HTML canvas. Em seguida, o método HTMLCanvasElement.getContext() pega o contexto daquele elemento - a coisa sobre a qual o desenho será renderizado.</p>
-                <p>O desenho atual é feito usando a interface CanvasRenderingContext2D. A propriedade fillStyle faz o retângulo verde. O método fillRect() coloca seu canto superior direito em (10, 10) e dá a ele o tamanho de 150 unidades de largura e 100 de altura.</p>
+                <p>O método Document.getElementById() pega uma referência para o elemento HTML canvas. Em seguida, o
+                    método HTMLCanvasElement.getContext() pega o contexto daquele elemento - a coisa sobre a qual o
+                    desenho será renderizado.</p>
+                <p>O desenho atual é feito usando a interface CanvasRenderingContext2D. A propriedade fillStyle faz o
+                    retângulo verde. O método fillRect() coloca seu canto superior direito em (10, 10) e dá a ele o
+                    tamanho de 150 unidades de largura e 100 de altura.</p>
 
                 <div class="caixa_preta">
-                    <p>const canvas = document.getElementById("canvas"); <br>
-                        const ctx = canvas.getContext("2d"); <br>
-                        
-                        ctx.fillStyle = "green"; <br>
-                        ctx.fillRect(10, 10, 150, 100);</p>
+                    <p>var c =document.getElementById("circulo");<br>
+                        var ctx =c .getContext("2d");<br>
+                        ctx.arc(70,18,15,0,Math.PI * 2);<br>
+                        ctx.stroke();</p>
                 </div>
 
                 <h1>Resultado</h1>
@@ -75,14 +82,14 @@
                     <p>HTML</p>
                 </div>
                 <div class="caixa_branca">
-                    <div class="caixa_exemplo"></div>
+                    <canvas id="circulo"></canvas>
                 </div>
             </div>
 
         </div>
 
     </div>
-    
+
     <!-- FOOTER -->
 
     <footer>
@@ -100,6 +107,7 @@
     </footer>
 
     <script src="../js/pageName.js"></script>
+    <script src="../js/canvas.js"></script>
 
 </body>
 
