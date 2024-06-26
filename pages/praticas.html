@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/api.css">
+    <link rel="stylesheet" href="../css/pratica.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container_header">
+            <div class="header_img">
+                <img src="../static/logo.jpeg" alt="">
+            </div>
+            <div class="links">
+                <a href="../pages/inicio.html">INICIO</a>
+                <a href="#sobre2">SOBRE</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SOBRE  -->
+
+    <div class="conteudo">
+        <div class="container_conteudo">
+
+            <div class="exemplos">
+                <h1>COMO USAR A TAG CANVAS  </h1>
+                <p>A canvas nada mais é do que um espaço onde podemos desenhar elementos específicos, formas geométricas
+                    e imagens, por exemplo, através de script (javascript geralmente). Também podemos usar CSS para a
+                    tag .</p>
+                <p>Por Javascript podemos acessar métodos da canvas que desenham formas, linhas, caracteres e adicionar
+                    imagens.</p>
+                <p>Vale resaltar que versões antigas de navegadores podem ser incompatíveis, as versões do Internet
+                    Explorer anterior ao 9, por exemplo.</p>
+                <p>Criar uma canvas não difere do que já conhecemos de outras tags HTML. Vejamos:</p>
+
+                <div class="caixa_preta">
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html&gt;<br>
+                    &lt;body&gt;<br>
+                    &lt;canvas id="idCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"&gt;<br>
+                    Se seu navegador não suportar HTML5 você verá esta mensagem.<br>
+                    &lt;/canvas&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+                </div>
+
+                <p>Na Listagem 1 criamos uma canvas com largura 200px e altura 100px e usamos CSS para decoramos a borda
+                    da mesma.</p>
+                <p>Note que coloquei um texto dentro da canvas que será exibido caso você não esteja usando um navegador
+                    que tenha suporte ao HTML5, lembre-se que não podemos colocar elementos HTML dentro de canvas.
+                    Veremos no próximo tópico como desenhar dentro da canvas por Javascript.</p>
+
+                <h2>Desenhando formas e imagens na canvas</h2>
+
+                <p>Muito bem, vamos começar a desenhar agora. Nos próximos exemplos veremos como desenhar círculos,
+                    retângulos, linhas e por fim veremos como adicionar imagens.</p>
+                <p>Antes de começarmos os desenhos, devemos saber que uma canvas é composta por pixels como em um plano
+                    cartesiano que começam em x = 0 e y =0 no canto superior esquerdo onde x é crescente para a direita
+                    e y é crescente para baixo.</p>
+
+                <div class="exemplos_img">
+                    <img src="../static/exemplo_canvas.jpeg" alt="">
+                </div>
+
+                <p>Outra coisa que devemos saber é que sempre antes de desenhar, devemos selecionar a canvas e capturar
+                    o contexto gráfico da mesma, pelo metodo getContext(), da seguinte forma:</p>
+                <p>Listagem 2: Selecionando a canvas e capturando o contexto gráfico.</p>
+                <div class="caixa_preta">
+                    <p>var c=document.getElementById("idCanvas");<br>
+                        var ctx=c.getContext("2d");</p>
+                </div>
+                <p>Para desenhar qualquer coisa na canvas, sempre devemos ter o contexto dela acessível, por isso
+                    armazenamos ele em uma variável.</p>
+
+                <h2>Desenhando Linha</h2>
+                <p>Para desenharmos uma linha, precisamos usar no mínimo três métodos, são eles: moveTo(x,y),
+                    lineTo(x,y) e stroke(). O primeiro define o ponto inicial da linha, já o segundo é o próximo ponto,
+                    o último, por sua vez, desenha a linha. Vejamos um exemplo na Listagem 3.</p>
+
+                <div class="caixa_preta">
+                    <p>var c=document.getElementById("idCanvas");<br>
+                        var ctx=c.getContext("2d");<br>
+                        ctx.moveTo(10,10);//ponto inicial<br>
+                        ctx.lineTo(150,50);//próximo ponto<br>
+                        ctx.stroke();//desenha</p>
+                </div>
+
+                <h2>Desenhando um circulo</h2>
+
+                <p>Aqui vamos precisar basicamente de dois métodos: arc(x,uy,r,aInicial,aFinal) que recebe as
+                    coordenadas onde será colocado o centro do circulo, o raio e os ângulos em relação aos quadrantes do
+                    círculo, e o já conhecido stroke(). Vejamos na prática:</p>
+
+                <div class="caixa_preta">
+                    <p>var c=document.getElementById("idCanvas");<br>
+                        var ctx=c.getContext("2d");<br>
+                        ctx.arc(70,18,15,0,Math.PI * 2);<br>
+                        ctx.stroke();</p>
+                </div>
+
+                <p>Note que estamos usando Math.PI * 2 onde deveríamos passar o ângulo final, isso nada mais é que uma
+                    forma de desenhar um circulo completo. Você pode experimentar mudar esses valores e ver como fica.
+                </p>
+
+                <h2>Desenhando um Retângulo</h2>
+
+                <p>No desenho do retângulo, apenas mais um método que não conhecemos é apresentado:
+                    rect(x,y,largura,altura). Em sguida usamos novamente o stroke().</p>
+
+                <div class="caixa_preta">
+                    <p>
+                        var c=document.getElementById("idCanvas");<br>
+                        var ctx=c.getContext("2d");<br>
+                        ctx.rect(20,20,150,50);<br>
+                        ctx.stroke();
+                    </p>
+                </div>
+
+                <h2>Adicionando imagens</h2>
+
+                <p>Para imagens o processo é um pouco diferente do que vimos até agora, mas é tão simples quanto.
+                    Precisaremos instanciar um objeto do tipo Image e adicionar ao método onload dela uma função que
+                    chama o método drawImage(Image,x,y) e, finalmente, dizer para o objeto do tipo Image qual a url da
+                    imagem. Vejam os passos na Listagem 6:</p>
+
+                <div class="caixa_preta">
+                    var c=document.getElementById("idCanvas");<br>
+                    var ctx=c.getContext("2d");<br>
+                    var img=new Image();<br>
+                    img.onload = function(){<br>
+                    ctx.drawImage(img,0,0);<br>
+                    };<br>
+                    img.src="img.png";
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer_container">
+            <div class="img_footer">
+                <img src="../static/logo.jpeg" alt="">
+            </div>
+
+            <div class="links_footer">
+                <h2>LINKS UTEIS</h2>
+                <a href="../pages/inicio.html">inicio</a>
+                <a href="#sobre">sobre</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/pageName.js"></script>
+</body>
+
+</html>

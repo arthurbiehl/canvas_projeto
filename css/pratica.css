@@ -1,0 +1,9 @@
+.exemplos_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exemplos_img img {
+    width: 450px;
+}
