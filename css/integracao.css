@@ -63,3 +63,20 @@ svg {
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 850px) {
+
+    .container_integracao{
+        display: flex;
+        width: 600px;
+        height: auto;
+        flex-direction: column;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container_integracao{
+        width: 200px;
+    }
+}   

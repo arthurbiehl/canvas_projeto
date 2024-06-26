@@ -92,3 +92,56 @@
     margin: 20px;
     background-color: green;
 }
+
+@media screen and (max-width: 950px) {
+    .container_conteudo {
+        width: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .container_conteudo {
+        width: 100%;
+        font-size: 10px;
+    }
+    .exemplos {
+        width: 100%;
+    }
+
+
+    .escrita_conteudo {
+        width: 100%;
+    }
+
+    .caixa_preta {
+        width: 500px;
+    }
+
+    .caixa_branca {
+        width: 500px;
+    }
+
+    .preto {
+        width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 600px ) {
+    .caixa_preta {
+        width: 200px;
+    }
+
+    .caixa_branca {
+        width: 200px;
+    }
+
+    .preto {
+        width: 200px;
+    }
+}
