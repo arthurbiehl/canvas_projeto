@@ -30,6 +30,7 @@
     box-shadow: 0px 0px 2px rgba(82, 82, 82, 0.646);
     position: relative;
     transition: all 0.5s ease-in-out;
+    
 }
 
 .topico img {
@@ -46,25 +47,6 @@
 }
 
 
-.conteudo_caixa {
-    width: 100%;
-    height: 60px;
-    display: flex;  
-    align-items: center;
-    justify-content: left;
-    text-align: left;
-    position: absolute;
-    color: rgba(255, 255, 255, 0.838);
-    font-size: 18px;
-    background-color: rgb(39, 39, 39);
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.conteudo_caixa p {
-    margin-left: 10px;
-}
 
 .topico:hover {
     border-radius: 5px;
@@ -79,30 +61,57 @@
     opacity: 1;
 }
 
+
+.conteudo_caixa {
+    width: 100%;
+    height: 60px;
+    display: flex;  
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.838);
+    font-size: 18px;
+    background-color: rgb(39, 39, 39);
+    z-index: 2;
+    opacity: 0;
+}
+
+.conteudo_caixa p {
+    margin-left: 10px;
+}
+
 @media screen and (max-width: 850px) {
     .topicos {
-        height: auto;
-        flex-wrap: wrap;
+        height: 600px;
 
     }
     .container_topicos {
         width: 100%;
         height: 900px;
-        
-        flex-wrap: wrap;
     }
 
+    .topico {
+        height: 200px;
+
+    }
 }
 
 @media screen and (max-width: 450px) {
     .topicos {
         width: 100%;
-        height: 900px;
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .container_topicos{
-        width: 300px;
-        height: 500px   ;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .topico{

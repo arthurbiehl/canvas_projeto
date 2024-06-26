@@ -39,6 +39,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;    
+    transition: 0.5s;
 }
 
 .links a {
@@ -46,11 +47,14 @@ header {
     color: white;
     margin: 10px;
     font-size: 14px;
+    z-index: 1;
 }
 
-.links a:hover {
-    color: rgb(201, 201, 201);
+.links:hover > :not(:hover){
+    color: white;
+    opacity: 0.5;
 }
+
 
 .linha {
     background-color: rgb(177, 177, 177);
