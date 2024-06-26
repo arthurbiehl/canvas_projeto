@@ -61,3 +61,9 @@ header {
     width: 1px;
     height: 30px
 }
+
+@media screen and (max-width: 650px) {
+    .header_img{
+        display: none;
+    }
+}
